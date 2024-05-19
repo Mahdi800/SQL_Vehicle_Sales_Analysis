@@ -1,6 +1,6 @@
 # sql_vehicle_sales_analysis
 
-##Excel
+## Excel
 Before I import the dataset to mysql, I first reduce the size the dataset in excel. Instead of working with ~500,000 rows of data, I limit the number to 9,435 rows. The new dataset only includes details for cars that are from 2015.
 I used the filter function in excel to reduce the dataset size. 
 -Go to Data
