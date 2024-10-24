@@ -37,15 +37,6 @@ where brand_rank = 1;
 
 
 # Query 5
-# Finding the car brand with highest aaverage condition
-SELECT make
-FROM cars2015.mytable 
-GROUP BY make
-ORDER BY AVG(mytable.condition) DESC
-LIMIT 1;
-
-
-# Query 6
 # Finding the distribution of color for the cars (most popular colors)
 SELECT color, COUNT(*) AS count
 FROM cars2015.mytable
@@ -53,7 +44,7 @@ GROUP BY color
 order by count desc;
 
 
-# Query 7 
+# Query 6 
 # Showing the most popular color for each car brand
 SELECT make, color
 FROM (
@@ -65,14 +56,14 @@ FROM (
 WHERE row_num = 1;
 
 
-# Query 8
+# Query 7
 # Showing the average body type for each car brand
 SELECT make, body
 FROM cars2015.mytable
 GROUP BY make, body;
 
 
-# Query 9
+# Query 8
 # Showing the highest and lowest selling prices
 SELECT make, model, sellingprice
 FROM cars2015.mytable
@@ -80,7 +71,7 @@ WHERE CAST(sellingprice AS UNSIGNED) = (SELECT MAX(CAST(sellingprice AS UNSIGNED
    or CAST(sellingprice AS UNSIGNED) = (SELECT MIN(CAST(sellingprice AS UNSIGNED)) FROM cars2015.mytable);
 
 
-# Query 10 
+# Query 9 
 # Showing the conditions of the highest and lowest priced cars
 SELECT make, model, CAST(sellingprice AS UNSIGNED) AS sellingprice, t.condition
 FROM cars2015.mytable t
@@ -92,7 +83,7 @@ ON CAST(t.sellingprice AS UNSIGNED) = prices.max_price OR CAST(t.sellingprice AS
 ORDER BY t.condition + 0;
 
 
-# Query 11
+# Query 10
 # Showing the relation between selling price and condition
 SELECT mytable.condition, round(AVG(sellingprice), 2) AS average_selling_price
 FROM cars2015.mytable
@@ -100,7 +91,7 @@ GROUP BY mytable.condition
 order by mytable.condition+0;
 
 
-# Query 12
+# Query 11
 # Displaying expensive and affordable cars
 SELECT make, model, sellingprice,
     CASE 
@@ -110,4 +101,3 @@ SELECT make, model, sellingprice,
     END AS price_category
 FROM cars2015.mytable
 order by make;
-
