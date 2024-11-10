@@ -1,7 +1,7 @@
 # SQL Vehicle Sales Analysis
 ## Dataset
-The dataset used in this project is available on Kaggle: \
-https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data/data
+The original dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data/data), but the dataset has been cleaned and modified for the specific needs of this project. You can find the datset used in this project in the "Dataset.csv" file of this repository.
+
 ## Excel
 Before importing the dataset to mysql, I first reduced the size the dataset in excel. Instead of working with ~500,000 rows of data, I limited the number to 9,435 rows. The new dataset only includes details for cars that are from 2015.
 I used the filter function in excel to reduce the dataset size.<br>
