@@ -125,7 +125,7 @@ order by mytable.condition+0;
 ### Query 11
 **Displaying expensive and affordable cars** \
 **If the car price is less than $40,000 we will consider it affordable. From $40,000 to $80,000 it is average. Anything over $80,000 is expensive:** \
-'''
+```
 SELECT make, model, sellingprice, \
     CASE \
         WHEN sellingprice > 80000 THEN 'Expensive' \
@@ -134,4 +134,4 @@ SELECT make, model, sellingprice, \
     END AS price_category \
 FROM cars2015.mytable \
 order by make;
-'''
+```
