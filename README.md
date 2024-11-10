@@ -5,13 +5,14 @@ The original dataset used in this project is available on [Kaggle](https://www.k
 ## Excel
 Before importing the dataset to mysql, I first reduced the size the dataset in excel. Instead of working with ~500,000 rows of data, I limited the number to 9,435 rows. The new dataset only includes details for cars that are from 2015.
 I used the filter function in excel to reduce the dataset size.<br>
+```
 -Go to Data\
 -Filter\
 -Select the button that has appeared on the "year" column\
 -In the pop up, deselect 2015\
 -Delete all remaining the data\
 -Now only data from 2015 is shown\
-
+```
 **Instructions for deleting blank cells:** \
 -commad A \
 -control G \
