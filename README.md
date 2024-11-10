@@ -28,7 +28,7 @@ I encountered an error when uploading the csv file to mysql. The error message w
 
 ## Code Breakdwon
 In this section each of the queries written in this project will be discussed. \
-The results of these queries are available in the "Results" folder of this repository. \
+The results of these queries are available in the "Results" folder of this repository. 
 ### Query 1
 **Showing each car brand in the table and their count:** \
 select make, count(*) as 'Number of cars' \
