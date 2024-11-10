@@ -35,43 +35,43 @@ The results of these queries are available in the "Results" folder of this repos
 ### Query 1
 **Showing each car brand in the table and their count:** 
 ```
-select make, count(*) as 'Number of cars' 
-from cars2015.mytable 
-group by make; 
+SELECT make, count(*) as 'Number of cars' 
+FROM cars2015.mytable 
+GROUP BY make; 
 ```
 
 ### Query 2
 **Finding out the relation between condition and milage** \
 **My assumption is that the higher the milage, the higher the condition score would be:** 
 ```
-select mytable.condition, round(avg(odometer),0) as average_milage 
-from cars2015.mytable 
-where mytable.condition <> "" 
-group by mytable.condition 
-order by mytable.condition+0;
+SELECT mytable.condition, round(avg(odometer),0) as average_milage 
+FROM cars2015.mytable 
+WHERE mytable.condition <> "" 
+GROUP BY mytable.condition 
+ORDER BY mytable.condition+0;
 ```
 
 ### Query 3
 **Finding the brand with the highest aveage condition:** 
 ```
-select make 
-from cars2015.mytable 
-group by make 
-order by avg(mytable.condition) desc 
-limit 1;
+SELECT make 
+FROM cars2015.mytable 
+GROUP BY make 
+ORDER BY avg(mytable.condition) DESC 
+LIMIT 1;
 ```
 
 ### Query 4
 **Finding the most popular brand in each state:** 
 ```
-select state, make 
-from ( 
-    select state, make, 
+SELECT state, make 
+FROM ( 
+    SELECT state, make, 
            ROW_NUMBER() over (partition by state order by COUNT(*) desc) as brand_rank 
-    from cars2015.mytable 
-    group by state, make 
+    FROM cars2015.mytable 
+    GROUP BY state, make 
 ) as ranked_brands 
-where brand_rank = 1;
+WHERE brand_rank = 1;
 ```
 
 ### Query 5
@@ -80,7 +80,7 @@ where brand_rank = 1;
 SELECT color, COUNT(*) AS count 
 FROM cars2015.mytable 
 GROUP BY color 
-order by count desc; 
+ORDER BY count desc; 
 ```
 
 ### Query 6 
@@ -110,7 +110,7 @@ GROUP BY make, body;
 SELECT make, model, sellingprice 
 FROM cars2015.mytable 
 WHERE CAST(sellingprice AS UNSIGNED) = (SELECT MAX(CAST(sellingprice AS UNSIGNED)) FROM cars2015.mytable) 
-   or CAST(sellingprice AS UNSIGNED) = (SELECT MIN(CAST(sellingprice AS UNSIGNED)) FROM cars2015.mytable);
+   OR CAST(sellingprice AS UNSIGNED) = (SELECT MIN(CAST(sellingprice AS UNSIGNED)) FROM cars2015.mytable);
 ```
 
 ### Query 9 
@@ -132,7 +132,7 @@ ORDER BY t.condition + 0;
 SELECT mytable.condition, round(AVG(sellingprice), 2) AS average_selling_price 
 FROM cars2015.mytable 
 GROUP BY mytable.condition 
-order by mytable.condition+0;
+ORDER BY mytable.condition+0;
 ```
 
 ### Query 11
@@ -146,5 +146,5 @@ SELECT make, model, sellingprice,
         ELSE 'Average' 
     END AS price_category 
 FROM cars2015.mytable 
-order by make;
+ORDER BY make;
 ```
