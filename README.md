@@ -10,7 +10,7 @@ I used the filter function in excel to reduce the dataset size.<br>
 -Delete all remaining the data\
 -Now only data from 2015 is shown\
 
-**Instructions for eleting blank cells:** \
+**Instructions for deleting blank cells:** \
 -commad A \
 -control G \
 -press "Special"  \
