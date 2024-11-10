@@ -37,8 +37,8 @@ group by make;
 
 
 ### Query 2
-**Finding out the relation between condition and milage.** \
-**My assumption is that the higher the milage, the higher the condition score would be.** \
+**Finding out the relation between condition and milage** \
+**My assumption is that the higher the milage, the higher the condition score would be:** \
 select mytable.condition, round(avg(odometer),0) as average_milage \
 from cars2015.mytable \
 where mytable.condition <> "" \
@@ -124,7 +124,7 @@ order by mytable.condition+0;
 
 ### Query 11
 **Displaying expensive and affordable cars** \
-**If the car price is less than $40,000 we will consider it affordable. From $40,000 to $80,000 it is average. Anything over $80,000 is expensive.** \
+**If the car price is less than $40,000 we will consider it affordable. From $40,000 to $80,000 it is average. Anything over $80,000 is expensive:** \
 SELECT make, model, sellingprice, \
     CASE \
         WHEN sellingprice > 80000 THEN 'Expensive' \
