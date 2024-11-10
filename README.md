@@ -27,6 +27,8 @@ After deleting all the blank cells 7,993 rows remain.
 I encountered an error when uploading the csv file to mysql. The error message was: "**MySQL Error: Unhandled exception: 'ascii' codec can't decode byte 0xef in position 0: ordinal not in range(128)**". The solution to this error is to convert the csv file to a json file. The code in the **csv2json.ipynb** file was used to achieve this.
 
 ## Code Breakdwon
+In this section each of the queries written in this project will be discussed. \
+The results of these queries are available in the "Results" folder of this repository. \
 ### Query 1
 **Showing each car brand in the table and their count:** \
 select make, count(*) as 'Number of cars' \
