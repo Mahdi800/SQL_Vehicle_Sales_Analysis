@@ -26,7 +26,7 @@ I encountered an error when uploading the csv file to mysql. The error message w
 
 ## Code Breakdwon
 ### Query 1
-#Showing each car brand in the table and their count \
+**Showing each car brand in the table and their count** \
 select make, count(*) as 'Number of cars' \
 from cars2015.mytable \
 group by make; 
