@@ -13,16 +13,16 @@ I used the filter function in excel to reduce the dataset size.<br>
 -Delete all remaining the data
 -Now only data from 2015 is shown
 ```
-**Instructions for deleting blank cells:** 
+Instructions for deleting blank cells:
 ```
--commad A 
--control G 
--press "Special"  
--select "Blanks" 
--press "OK" 
--control "-" 
--select "Entire row" 
--press "OK"
+-Command A 
+-Control G 
+-Press "Special"  
+-Select "Blanks" 
+-Press "OK" 
+-Control "-" 
+-Select "Entire row" 
+-Press "OK"
 ```
 After deleting all the blank cells 7,993 rows remain.
 
